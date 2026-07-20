@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>make.la</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #e6edf3;
+      --accent: #58a6ff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f6f8fa;
+        --fg: #1f2328;
+        --accent: #0969da;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    }
+    pre {
+      /* 36-char-wide banner: scale font so it always fits the viewport */
+      font-size: clamp(6px, 4.1vw, 22px);
+      line-height: 1.2;
+      white-space: pre;
+      color: var(--accent);
+      text-shadow: 0 0 12px rgba(88, 166, 255, 0.25);
+    }
+    .cursor {
+      display: inline-block;
+      animation: blink 1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+</head>
+<body>
+  <pre aria-label="make.la">                 _          _
+ _ __ ___   __ _| | _____  | | __ _
+| '_ ` _ \ / _` | |/ / _ \ | |/ _` |
+| | | | | | (_| |   &lt;  __/_| | (_| |
+|_| |_| |_|\__,_|_|\_\___(_)_|\__,_|<span class="cursor">_</span></pre>
+</body>
+</html>
